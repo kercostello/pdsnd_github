@@ -7,7 +7,9 @@ August 5th, 2023
 Bikeshare Data Explorer
 
 ### Description
-This project explores Bikeshare usage data in Chicago, New York City, and Washington.
+This project explores Bikeshare usage data in Chicago, New York City, and Washington. 
+It provides statistics on most popular times of travel, popular stations, trip duration, and bikeshare users.
+Users can also look through raw data in an interactive manner.
 
 ### Files used
 bikeshare_2.py
