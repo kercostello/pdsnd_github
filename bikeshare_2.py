@@ -183,12 +183,11 @@ def trip_duration_stats(bikeshare_data):
     print('-'*40)
 
 
-def user_stats(bikeshare_data,city):
+def user_stats(bikeshare_data):
     """Displays statistics on bikeshare users.
     
     Args:
         (Pandas DataFrame) bikeshare_data - bikeshare data file
-        (str) city - name of the city to analyze
     """
 
     print('\nCalculating User Stats...\n')
@@ -234,15 +233,20 @@ def show_raw(bikeshare_data):
             see_raw = input('\nWould you like to see five more lines of raw data? Enter yes or no.\n')
         
 
+def get_stats(bikeshare_data):
+    time_stats(bikeshare_data)
+    station_stats(bikeshare_data)
+    trip_duration_stats(bikeshare_data)
+    user_stats(bikeshare_data)     
+
+
 def main():
     while True:
         city, month, day = get_filters()
         bikeshare_data = load_data(city, month, day)
 
-        time_stats(bikeshare_data)
-        station_stats(bikeshare_data)
-        trip_duration_stats(bikeshare_data)
-        user_stats(bikeshare_data,city)
+        get_stats(bikeshare_data)
+
         show_raw(bikeshare_data)
 
         restart = input('\nWould you like to explore more? Enter yes or no.\n')
