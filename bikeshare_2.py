@@ -98,7 +98,11 @@ def load_data(city, month, day):
 
 
 def time_stats(df):
-    """Displays statistics on the most frequent times of travel."""
+    """Displays statistics on the most frequent times of travel.
+    
+    Args:
+        (Pandas DataFrame) df - bikeshare data file
+    """
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
@@ -131,7 +135,11 @@ def time_stats(df):
 
 
 def station_stats(df):
-    """Displays statistics on the most popular stations and trip."""
+    """Displays statistics on the most popular stations and trip.
+    
+    Args:
+        (Pandas DataFrame) df - bikeshare data file
+    """
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
@@ -154,7 +162,11 @@ def station_stats(df):
 
 
 def trip_duration_stats(df):
-    """Displays statistics on the total and average trip duration."""
+    """Displays statistics on the total and average trip duration.
+    
+    Args:
+        (Pandas DataFrame) df - bikeshare data file
+    """
 
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
@@ -172,7 +184,12 @@ def trip_duration_stats(df):
 
 
 def user_stats(df,city):
-    """Displays statistics on bikeshare users."""
+    """Displays statistics on bikeshare users.
+    
+    Args:
+        (Pandas DataFrame) df - bikeshare data file
+        (str) city - name of the city to analyze
+    """
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
@@ -199,12 +216,12 @@ def user_stats(df,city):
 
 
 def show_raw(df):
-    """Displays raw bikeshare data on user request."""
-#     Your script should prompt the user if they want to see 5 lines of raw data,
-# Display that data if the answer is 'yes',
-# Continue iterating these prompts and displaying the next 5 lines of raw data at each iteration,
-# Stop the program when the user says 'no' or there is no more raw data to display.
-# Tips: you can implement the while loop and track the row index in order to display the continuous raw data.
+    """Displays raw bikeshare data on user request.
+    
+    Args:
+        (Pandas DataFrame) df - bikeshare data file
+    """
+
     seeraw = input('\nWould you like to see five lines of raw data? Enter yes or no.\n')
     i=0
     while seeraw == 'yes' and i<df.shape[0]:
